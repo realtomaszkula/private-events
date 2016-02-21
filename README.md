@@ -1,0 +1,1 @@
+Solution for [project](http://www.theodinproject.com/ruby-on-rails/associations).
