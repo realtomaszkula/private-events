@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  layout 'sign_in_page', only: [:new]
+  layout 'form', only: [:new]
 
   def new
   end
