@@ -7,17 +7,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-    <div class="container">
-      <div class="row">
-        <%= render 'layouts/navigation' %>
-      <div class="col-sm-8 blog-main">
-        <%= yield %>
-      </div>
-      <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-        <%= render 'layouts/side_bar' %>
-      </div>
-        <%= render 'layouts/footer' %>
-      </div>
-    </div>
+    <%= render 'layouts/navigation' %>
+      <div class="container">
+        <%= render 'header' %>
+           <div class="row">
+              <div class="col-sm-8 blog-main">
+                <%= yield %>
+              </div>
+              <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+                <%= render 'layouts/side_bar' %>
+              </div>
+            </div> <!-- row -->
+      </div><!-- container -->
+      <%= render 'layouts/footer' %>
 </body>
 </html>
