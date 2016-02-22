@@ -7,6 +7,6 @@
 <%= label_tag :attending %>
 <ul>
 <% @event.attendees.each do |attendee| %>
-  <%= content_tag :li, attendee.name %>
+  <li> <%= link_to "#{attendee.name}", user_path(attendee) %></li>
 <% end %>
 </ul>
