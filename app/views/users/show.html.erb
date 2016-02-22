@@ -1,0 +1,12 @@
+<%= label_tag :name %>
+<%= content_tag :p, "#{@user.name}" %>
+
+<%= label_tag :email %>
+<%= content_tag :p, "#{@user.email}" %>
+
+<%= label_tag :attended_events %>
+<ul>
+<% @user.attended_events.each do |event| %>
+  <li> <%= "#{event.date}, hosted by: #{event.host.name}" %> </li>
+<% end %>
+</ul>
