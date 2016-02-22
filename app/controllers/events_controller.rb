@@ -11,14 +11,14 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
     if @event.save
       flash[:success] = "Event created!"
-      redirect_to root_url
+      redirect_to @event
     else
       render :new
     end
   end
 
   def show
-    @event = Event.find(:params[:id])
+    @event = Event.find(params[:id])
   end
 
   private
