@@ -6,12 +6,12 @@
  <%= f.email_field :email , class: "form-control", placeholder: 'Email' %>
 
   <%= f.password_field :password , class: "form-control" , placeholder: 'Password'%>
-  <%= content_tag :div, class: 'checkbox' do %>
+<!--   <%= content_tag :div, class: 'checkbox' do %>
     <%= f.label :remember_me, class: "checkbox" do %>
       <%= f.check_box :remember_me %>
       <span>Remember me</span>
     <% end %>
-  <% end %>
+  <% end %> -->
 
 <%= f.submit 'Sign in',  class: "btn btn-lg btn-primary btn-block" %>
 <% end %>

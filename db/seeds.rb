@@ -1,3 +1,5 @@
+User.create(name: "zecik", email: 'asd@asd.pl', password: 'asd')
+
 10.times do
   name = Faker::Name.name
   email = Faker::Internet.email

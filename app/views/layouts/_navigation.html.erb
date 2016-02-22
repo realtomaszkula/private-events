@@ -1,8 +1,11 @@
     <div class="blog-masthead">
       <div class="container" id='nav-bar'>
         <nav class="blog-nav">
-        <%= link_to 'Events', root_url, class: "blog-nav-item active" %>
-        <%= link_to 'New Event', new_event_path, class: "blog-nav-item active" %>
+        <%= link_to 'Home', root_url, class: "blog-nav-item active" %>
+        <% if logged_in? %>
+          <%= link_to 'My Events', event_path(current_user), class: "blog-nav-item active" %>
+          <%= link_to 'New Event', new_event_path, class: "blog-nav-item active" %>
+        <% end %>
         </nav>
       </div>
     </div>
