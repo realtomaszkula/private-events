@@ -4,9 +4,21 @@
 <%= label_tag :email %>
 <%= content_tag :p, "#{@user.email}" %>
 
-<%= label_tag :attended_events %>
 <ul>
-<% @user.attended_events.each do |event| %>
-  <li> <%= "#{event.date}, hosted by: #{event.host.name}" %> </li>
-<% end %>
+<%= label_tag :upcoming_events %>
+  <% @upcoming_events.each do |event| %>
+    <li>
+      <%= link_to "<<", event_path(event) %>
+      <%= "#{event.date}, hosted by #{event.host.name}" %>
+    </li>
+  <% end %>
+</ul>
+<ul>
+<%= label_tag :past_events %>
+  <% @past_events.each do |event| %>
+    <li>
+      <%= link_to "<<", event_path(event) %>
+      <%= "#{event.date}, hosted by #{event.host.name}" %>
+    </li>
+  <% end %>
 </ul>

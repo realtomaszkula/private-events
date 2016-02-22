@@ -5,4 +5,14 @@ class User < ActiveRecord::Base
   has_many :attended_events, :through => :invitations
 
   has_secure_password
+
+
+  def upcoming_events
+    attended_events.where("date > ?", Time.now)
+  end
+
+  def past_events
+    attended_events.where("date < ?", Time.now)
+  end
+
 end

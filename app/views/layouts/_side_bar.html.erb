@@ -1,5 +1,5 @@
 <div class="sidebar-module sidebar-module-inset">
-  <%= content_tag :h3, "#{current_user.name}" %>
+  <h3> <%= link_to "#{current_user.name}", user_path(@current_user) %></h3>
   <%= link_to "Logout", logout_path, method: 'delete' %>
   </div>
 <div class="sidebar-module">

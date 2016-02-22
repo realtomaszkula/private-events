@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
   layout 'form', only: [:new]
-    skip_before_filter :require_login, only: [:new]
-
+  skip_before_filter :require_login, only: [:new]
 
   def new
     @user = User.new
@@ -19,6 +18,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @upcoming_events =  @user.upcoming_events
+    @past_events = @user.past_events
   end
 
   private

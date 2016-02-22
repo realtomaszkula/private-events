@@ -9,7 +9,7 @@ User.create(name: "zecik", email: 'asd@asd.pl', password: 'asd')
 end
 
 User.all.each do |user|
-  date = Faker::Date.between(1.days.from_now, 1.year.from_now)
+  date = Faker::Date.between(1.year.ago, 1.year.from_now)
   description = Faker::Lorem.paragraph
 
   e = user.hosted_events.create(date: date, description: description )
