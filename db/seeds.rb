@@ -1,8 +1,9 @@
 10.times do
   name = Faker::Name.name
   email = Faker::Internet.email
+  password = Faker::Internet.password
 
-  User.create(name: name, email: email)
+  User.create(name: name, email: email, password: password)
 end
 
 User.all.each do |user|
