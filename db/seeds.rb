@@ -12,5 +12,11 @@ User.all.each do |user|
   date = Faker::Date.between(1.days.from_now, 1.year.from_now)
   description = Faker::Lorem.paragraph
 
-  user.hosted_events.create(date: date, description: description )
+  e = user.hosted_events.create(date: date, description: description )
+
+  User.all.sample(rand(1..5)).each do |user|
+    e.attendees << user
+  end
+
 end
+
